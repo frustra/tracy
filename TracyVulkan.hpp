@@ -297,7 +297,7 @@ private:
             { VK_STRUCTURE_TYPE_CALIBRATED_TIMESTAMP_INFO_EXT, nullptr, VK_TIME_DOMAIN_DEVICE_EXT },
             { VK_STRUCTURE_TYPE_CALIBRATED_TIMESTAMP_INFO_EXT, nullptr, m_timeDomain },
         };
-        uint64_t ts[2], bestTs[2];
+        uint64_t ts[2], bestTs[2] = {};
         uint64_t deviation;
         uint64_t minDeviation = UINT64_MAX;
         size_t tries = CalibrationProbeTries;
